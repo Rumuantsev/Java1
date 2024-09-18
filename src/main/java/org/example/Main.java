@@ -9,7 +9,7 @@ import static java.lang.Math.sqrt;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(ex4(2));
+        System.out.println(ex5("erttre"));
         /*Scanner in = new Scanner(System.in);
         System.out.print("Input Ex: ");
         int ex = in.nextInt();
@@ -74,6 +74,20 @@ public class Main {
             index = 1 / (n*n + n - 2);
             result += index;
             ++n;
+        }
+        return result;
+    }
+
+    public static boolean ex5(String str){
+        boolean result = true;
+        int startIndex = 0;
+        int endIndex = str.length() - 1;
+        while (startIndex <= endIndex){
+            if(str.charAt(startIndex) != str.charAt(endIndex)){
+                result = false;
+                return result;
+            }
+            ++startIndex; --endIndex;
         }
         return result;
     }

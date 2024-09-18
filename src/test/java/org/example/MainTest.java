@@ -44,4 +44,10 @@ class MainTest {
     void ex4() {
         assertEquals(0.6101121094474383, Main.ex4(2));
     }
+
+    @Test
+    void ex5() {
+        assertTrue(Main.ex5("erttre"));
+        assertFalse(Main.ex5("ertyui"));
+    }
 }
