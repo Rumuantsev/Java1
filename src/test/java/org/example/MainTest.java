@@ -22,4 +22,21 @@ class MainTest {
         String testString = "llatsni ekam";
         assertEquals(testString , Main.ex2("make install"));
     }
+
+    @Test
+    void ex3() {
+        double a, b, c;
+        a = -6; b = 0; c = 54;
+        String[] testArray1 = {"-3.0", "3.0"};
+        List<String> test1 = Arrays.asList(testArray1);
+        assertEquals(test1, Main.ex3(a, b, c));
+        a = -4; b = 28; c = -49;
+        String[] testArray2 = {"3.5"};
+        List<String> test2 = Arrays.asList(testArray2);
+        assertEquals(test2, Main.ex3(a, b, c));
+        a = 3; b = -4; c = 94;
+        String[] testArray3 = {"There are no real roots!"};
+        List<String> test3 = Arrays.asList(testArray3);
+        assertEquals(test3, Main.ex3(a, b, c));
+    }
 }

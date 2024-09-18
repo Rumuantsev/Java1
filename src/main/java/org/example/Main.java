@@ -3,10 +3,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Math.sqrt;
+
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(ex2("make install"));
+        System.out.println(ex3(3, -4, 94));
         /*Scanner in = new Scanner(System.in);
         System.out.print("Input Ex: ");
         int ex = in.nextInt();
@@ -44,5 +46,23 @@ public class Main {
             --inputIndex;
         }
         return str;
+    }
+
+    public static List<String> ex3(double a, double b, double c){
+        List<String> result = new ArrayList<>();
+       double D = (b * b) - (4 * a * c);
+       double x = 0;
+       if (D < 0){
+            result.add("There are no real roots!");
+       } else if (D == 0) {
+            x = (b * -1) / (2 * a);
+           result.add(String.valueOf(x));
+       } else if (D > 0) {
+           x = ((b * -1) + sqrt(D)) / (2 * a);
+           result.add(String.valueOf(x));
+           x = ((b * -1) - sqrt(D)) / (2 * a);
+           result.add(String.valueOf(x));
+       }
+       return result;
     }
 }
