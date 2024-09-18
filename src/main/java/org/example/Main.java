@@ -3,12 +3,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(ex3(3, -4, 94));
+        System.out.println(ex4(2));
         /*Scanner in = new Scanner(System.in);
         System.out.print("Input Ex: ");
         int ex = in.nextInt();
@@ -64,5 +65,16 @@ public class Main {
            result.add(String.valueOf(x));
        }
        return result;
+    }
+
+    public static double ex4(double n){
+        double index = 1 / (n*n + n - 2);
+        double result = 0;
+        while (index >= pow(10, -6)){
+            index = 1 / (n*n + n - 2);
+            result += index;
+            ++n;
+        }
+        return result;
     }
 }

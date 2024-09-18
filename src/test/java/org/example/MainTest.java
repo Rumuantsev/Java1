@@ -39,4 +39,9 @@ class MainTest {
         List<String> test3 = Arrays.asList(testArray3);
         assertEquals(test3, Main.ex3(a, b, c));
     }
+
+    @Test
+    void ex4() {
+        assertEquals(0.6101121094474383, Main.ex4(2));
+    }
 }
