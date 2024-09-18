@@ -16,4 +16,10 @@ class MainTest {
         List<String> test = Arrays.asList(testArray);
         assertEquals(test, Main.ex1(7));
     }
+
+    @Test
+    void ex2() {
+        String testString = "llatsni ekam";
+        assertEquals(testString , Main.ex2("make install"));
+    }
 }
